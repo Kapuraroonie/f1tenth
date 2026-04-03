@@ -1,0 +1,15 @@
+services:
+  ros:
+    build: .
+    network_mode: host
+    privileged: true
+    stdin_open: true
+    tty: true
+    environment:
+      - DISPLAY=${DISPLAY}
+      - ROS_DOMAIN_ID=0
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./ws:/root/ws
+    working_dir: /root/ws
+    command: bash -c "echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc && bash"
