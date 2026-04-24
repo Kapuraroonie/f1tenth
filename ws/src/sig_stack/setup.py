@@ -33,6 +33,8 @@ setup(
         'console_scripts': [
             # Required to run your Python script from the terminal
             'global_location = sig_stack.global_location:main'
+          
+            'perception = sig_stack.perception:main',
         ],
     },
 )
