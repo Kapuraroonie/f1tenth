@@ -3,6 +3,8 @@
 [x] local planning \
 [x] localization node
 
+git submodule update --init --recursive --remote run this after cloning to make sure you clone the submodules
+
 **Some details on what's going on:**
 current repo - 
   perception - 
